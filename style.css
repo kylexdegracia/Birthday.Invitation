@@ -507,85 +507,76 @@ margin-bottom:12px;
 border-radius:10px;
 }
 
-
-/* =========================================
-   EVENT DETAILS & LOCATION GUIDE
-   ========================================= */
+/* DETAILS / VENUE SECTION */
 .details {
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
     justify-content: center;
+    gap: 20px;
+
     width: 100%;
-    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
 }
 
+/* CARD DESIGN */
 .card {
-    background: #fff7fb;
+    width: 100%;
+    max-width: 350px;
+
+    margin: 10px auto;
     padding: 20px;
+
     border-radius: 15px;
-    width: 350px;
+    background: #ffffff;
+
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    text-align: center; 
+
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    margin: 10px;
+    align-items: center;
+
+    box-sizing: border-box;
 }
 
+/* MAP / IFRAME */
 .card iframe {
+    width: 100%;
     height: 220px;
-    width: 100%;       
-    display: block;      
-    margin: 15px auto;   
-    border-radius: 12px;
     border: 0;
+    border-radius: 12px;
+    display: block;
 }
 
-/* =========================================
-   MOBILE RESPONSIVE (CONSOLIDATED)
-   ========================================= */
-@media (max-width: 768px) {
-    /* Fixes Navbar wrapping */
-    .navbar {
-        flex-wrap: wrap;
-        gap: 12px;
-        padding: 10px;
-    }
+/* TEXT INSIDE CARD */
+.card h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
 
-    /* FIXES THE SHIFTING CARDS & MAPS */
+.card p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+
     .details {
         flex-direction: column;
         align-items: center;
+        padding: 0 15px;
     }
 
     .card {
-        width: 90% !important; 
-        max-width: 320px;
-        margin: 15px auto !important; /* FORCES CENTER */
+        width: 100%;
+        max-width: 100%;
+        margin: 15px 0;
     }
 
-    /* GODPARENTS GRID FIX */
-    .godparents-container {
-        grid-template-columns: repeat(2, 1fr) !important;
-        max-width: 95%;
-        margin: 0 auto;
-    }
-
-    .two-column-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        margin: 10px auto;
-    }
-}
-
-@media (max-width: 480px) {
-    .godparents-container, 
-    .two-column-grid {
-        grid-template-columns: 1fr !important;
-    }
-    
-    .hero h1 {
-        font-size: 1.6rem;
+    .card iframe {
+        height: 200px;
     }
 }
 
@@ -1196,23 +1187,5 @@ font-size:16px;
     /* Show menu when clicking/hovering */
     .dropdown:hover .dropdown-content {
         display: block;
-    }
-}
-
-/* --- CENTER AND RESIZE GOOGLE MAPS --- */
-.location-guide iframe {
-    width: 100%;             /* Makes it take up the full container width */
-    max-width: 600px;        /* Prevents it from getting too big on desktop */
-    display: block;          /* Needed for auto margins to work */
-    margin: 20px auto;       /* Centers it horizontally */
-    border-radius: 15px;     /* Optional: matches your card aesthetic */
-    border: 0;
-}
-
-/* Specific Mobile Adjustments */
-@media (max-width: 768px) {
-    .location-guide iframe {
-        width: 90%;          /* Leaves a little breathing room on the sides */
-        height: 250px;       /* Slightly shorter height for phone screens */
     }
 }
