@@ -454,16 +454,16 @@ margin:auto;
     margin: 0 auto 20px auto; /* Added bottom margin to separate rows */
 }
 
-.two-column-row {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 600px; /* Narrower so the cards don't look too wide */
+.two-column-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    max-width: 600px; /* Makes the cards roughly the same size as the ones above */
+    margin: 20px auto 0 auto;
 }
 
-@media (max-width: 768px) {
-    .godparents-container, 
-    .two-column-row {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets/phones */
-        max-width: 95%;
+@media (max-width: 600px) {
+    .two-column-grid {
+        grid-template-columns: 1fr !important;
+        max-width: 100%;
     }
 }
 
