@@ -436,12 +436,12 @@ margin:40px 0;
 
 /* GODPARENTS */
 
-.godparents-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-max-width:800px;
-margin:auto;
+.godparents-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .godparents-container {
@@ -450,6 +450,14 @@ margin:auto;
     gap: 20px;
     max-width: 900px;
     margin: 0 auto 20px auto; /* Added bottom margin to separate rows */
+}
+
+.godparent-card {
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
 }
 
 .two-column-grid {
@@ -465,10 +473,9 @@ margin:auto;
     }
 }
 
-@media (max-width: 480px) {
-    .godparents-container, 
-    .two-column-row {
-        grid-template-columns: 1fr; /* 1 column on very small phones */
+@media (max-width: 768px) {
+    .godparents-container {
+        grid-template-columns: 1fr; /* 1 column on mobile */
     }
 }
 
