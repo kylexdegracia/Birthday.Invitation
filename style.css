@@ -435,93 +435,55 @@ margin:40px 0;
 
 
 /* GODPARENTS */
-
 .godparents-container {
     display: grid;
-    justify-items: center;
-    grid-template-columns: repeat(3, 1fr); /* Desktop = 3 columns */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
     gap: 20px;
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
-/* Cards */
+.godparents-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto 20px auto; /* Added bottom margin to separate rows */
+}
+
 .godparent-card {
     padding: 25px;
     border-radius: 15px;
     text-align: center;
     background: rgba(255,255,255,0.6);
     backdrop-filter: blur(10px);
-    transition: transform 0.3s ease;
 }
 
-.godparent-card:hover {
-    transform: translateY(-6px);
+.two-column-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    max-width: 600px; /* Makes the cards roughly the same size as the ones above */
+    margin: 20px auto 0 auto;
 }
 
-.godparent-card h3 {
-    color: #e91e63;
-}
-
-/* Tablet */
-@media (max-width: 768px) {
-    .godparents-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-    .godparents-container {
-        grid-template-columns: 1fr;
+@media (max-width: 600px) {
+    .two-column-grid {
+        grid-template-columns: 1fr !important;
+        max-width: 100%;
     }
 }
 
 @media (max-width: 768px) {
     .godparents-container {
-        grid-template-columns: 1fr;
-    }
-
-    .godparent-card {
-        grid-column: auto !important;
+        grid-template-columns: 1fr; /* 1 column on mobile */
     }
 }
 
-/* CUSTOM LAST 7 LAYOUT */
-
-/* Kaavi (7th from last) → LEFT */
-.godparent-card:nth-last-child(7) {
-    grid-column: 1 / 2;
+.godparent-card:hover{
+transform:translateY(-6px);
 }
 
-/* Tokie (6th from last) → CENTER */
-.godparent-card:nth-last-child(6) {
-    grid-column: 2 / 3;
-}
-
-/* Nikki (5th from last) → RIGHT */
-.godparent-card:nth-last-child(5) {
-    grid-column: 3 / 4;
-}
-
-/* Jose */
-.godparent-card:nth-last-child(4) {
-    grid-column: 1 / 2;
-}
-
-/* Queenie */
-.godparent-card:nth-last-child(3) {
-    grid-column: 2 / 3;
-}
-
-/* Anton */
-.godparent-card:nth-last-child(2) {
-    grid-column: 1 / 2;
-}
-
-/* Evan */
-.godparent-card:nth-last-child(1) {
-    grid-column: 2 / 3;
+.godparent-card h3{
+color:#e91e63;
 }
 
 /* DRESS CODE */
