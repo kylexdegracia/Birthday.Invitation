@@ -459,19 +459,6 @@ margin:40px 0;
     backdrop-filter: blur(10px);
 }
 
-.two-column-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    max-width: 600px; /* Makes the cards roughly the same size as the ones above */
-    margin: 20px auto 0 auto;
-}
-
-@media (max-width: 600px) {
-    .two-column-grid {
-        grid-template-columns: 1fr !important;
-        max-width: 100%;
-    }
-}
-
 @media (max-width: 768px) {
     .godparents-container {
         grid-template-columns: 1fr; /* 1 column on mobile */
